@@ -10,17 +10,18 @@ class MyApplication extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
-        statusBarIconBrightness: Brightness.dark,
-        statusBarColor: ColorManager.background,
-        statusBarBrightness: Brightness.dark));
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light.copyWith(
+      statusBarIconBrightness: Brightness.light,
+      statusBarColor: Colors.transparent,
+      // statusBarBrightness: Brightness.dark
+    ));
 
     var materialApp = MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Bba Shef',
       // theme: ThemeData(fontFamily: 'Harmonai Sans'),
       navigatorKey: NavigationService.navigatorKey,
-      initialRoute: Routes.home,
+      initialRoute: Routes.splash,
       routes: RouteManager().routes,
     );
 

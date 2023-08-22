@@ -1,17 +1,22 @@
- import '../view/home/home_page.dart';
+import 'package:bba_shef/view/profile/profile_page.dart';
+import 'package:bba_shef/view/splash/splash_page.dart';
+
+import '../view/home/home_page.dart';
 
 class Routes {
   Routes._internal();
-
-   static const String home = '/home';
+  static const String splash = '/profile';
+  static const String home = '/home';
 }
 
 class RouteManager {
   final routes = {
-     Routes.home: (context) => const HomePage(),
+    Routes.splash: (context) => const SplashPage(),
+    Routes.home: (context) => const HomePage(),
   };
 
   final pages = {
-     Routes.home: const HomePage(),
+    Routes.splash: const SplashPage(),
+    Routes.home: const HomePage(),
   };
 }
